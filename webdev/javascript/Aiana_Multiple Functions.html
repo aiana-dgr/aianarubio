@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Multiple Functions</title>
+    <script>
+        /* Input: Temperature in Fahrenheit and the wind speed from the user.
+             * Processing: Calculate the wind chill factor using the formula.
+             * Output: The wind chill factor
+             */
+
+        function doInputOutput() {
+            let temperature = parseFloat(document.getElementById('tempbox').value);
+            let windspeed = parseFloat(document.getElementById('windbox').value);
+            let result = windChill(temperature, windspeed);
+
+            // Display wind chill for the user to see.
+            document.getElementById('outputDiv').innerHTML = result;
+        }
+
+        function windChill(tempF, speed) {
+            let f = 35.74 + (0.6215 * tempF) - (35.75 * Math.pow(speed, 0.16)) + (0.4275 * tempF * Math.pow(speed, 0.16));
+
+            // Round the result to two digits after the decimal.
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            f = Math.round(f * multiplier) / multiplier;
+
+            return f;
+        }
+
+    </script>
+</head>
+
+<body>
+    Temperature(Fahrenheit): <input type="text" id="tempbox" size="5"><br>
+    Wind Speed(mph): <input type="text" id="windbox" size="5"><br>
+    <button type="button" onclick="doInputOutput()">Wind Chill</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rate of Change</title>
+
+    <script>
+        /* Input: Previous rate and current rate.
+         *   1. Calculate the rate of change by getting the 
+         *   difference of previous rate from the current rate then 
+         *   divide its difference by the previous rate.
+         *   3. Round the result to four digits after the decimal.
+         * Output: The rate of change.
+         */
+        function rateofChange() {
+            // Get the previous rate from the user.
+            let pr = parseFloat(document.getElementById('prNumber').value);
+
+            // Get the current rate from the user.
+            let cr = parseFloat(document.getElementById('crNumber').value);
+
+            // Calculate the rate of change.
+            let roc = (cr - pr) / pr;
+
+            // Round the rate of change to four digits after the decimal.
+            let digits = 4;
+            let multiplier = Math.pow(10, digits);
+            roc = Math.round(roc * multiplier) / multiplier;
+
+            // Display the rate of change to the user.
+            document.getElementById('outputDiv').innerHTML = roc;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Rate of Change Calculator</h3>
+    Previous Rate: <input type="text" id="prNumber" size="5">
+    Current Rate: <input type="text" id="crNumber" size="5"><br>
+    <button type="button" onclick="rateofChange()">Calculate</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

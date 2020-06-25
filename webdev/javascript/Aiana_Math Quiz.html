@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kiddie Math Quiz</title>
+    <script>
+        /* Input: An number, an operand and another number.
+            * Processing: Analyse and calculate the equation and
+            * determine if the user gave the correct answer.
+            * Output: Message.
+            */
+        function checkAns() {
+            // Get a number, an operand and another number from the user.
+            let int1 = parseFloat(document.getElementById('integer1Box').value);
+            let operand = document.getElementById('operandBox').value;
+            let int2 = parseFloat(document.getElementById('integer2Box').value);
+            let ans = parseFloat(document.getElementById('ansBox').value);
+
+            // Evaluate the equation. Display appripriate message.
+            let message;
+            if (operand == "+") {
+                if (ans == int1 + int2) {
+                    message = "Correct! " + "Good job!"
+                }
+                else {
+                    message = "Incorrect! " + "Try again!"
+                }
+            }
+            else if (operand == "-") {
+                if (ans == int1 - int2) {
+                    message = "Correct! " + "Good job!"
+                }
+                else {
+                    message = "Incorrect! " + "Try again!"
+                }
+            }
+            else if (operand == "*") {
+                if (ans == int1 * int2) {
+                    message = "Correct! " + "Good job!"
+                }
+                else {
+                    message = "Incorrect! " + "Try again!"
+                }
+            }
+            else if (operand == "/") {
+                if (ans == int1 / int2) {
+                    message = "Correct! " + "Good job!"
+                }
+                else {
+                    message = "Incorrect! " + "Try again!"
+                }
+            }
+            // Display the message.
+            document.getElementById('outputDiv').innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Test Your Math Skills!</h1>
+    <input type="text" id="integer1Box" size="3">
+    <input type="text" id="operandBox" size="1">
+    <input type="text" id="integer2Box" size="3">
+    = <input type="text" id="ansBox" size="3">
+    <button type="button" onclick="checkAns()">Check Answer</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

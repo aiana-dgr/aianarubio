@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>More Arrays</title>
+    <script>
+        /*Processing: Have two functions where one counts and returns the number of even integers in an array,
+            * and the other function should multiply each element in an array by some value
+            * and return the products in an array.
+            */
+        
+        //function made for testing purposes. Remove this function before submitting.
+        function showResults() {
+
+            let list1 = [17, 8, 9, 5, 20];
+            let list2 = [12, -4, 8, 15, 17, -5, 20, 11];
+            let list3 = [-4, 3, 2.1, 6];
+            let count1 = countEvens(list1);
+            let count2 = countEvens(list2);
+            let products = multiply(list1, 3);
+            let products2 = multiply(list3, 2);
+
+            //Display results for testing
+            document.getElementById('outputDiv').innerHTML = 
+            count1 + "<br/>" + count2 + "<br/>" + products + "<br/>" + products2;
+        }
+
+        function countEvens(list) {
+            let evens = 0;
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] % 2 == 0) {
+                    evens += 1;
+                }
+            }
+            return evens;
+        }
+
+        function multiply(list, multiplier) {
+            for (let i = 0; i < list.length; i++) {
+                list[i] *= multiplier;
+            }
+            return list;
+        }
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="showResults()">Test</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

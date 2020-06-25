@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Footwear Selector</title>
+    <script>
+        /* Input: Current weather.
+            * Processing: Determine day's weather and advise appropriate footwear.
+            * Output: Correct footwear.
+            */
+        function footWear() {
+            // Get the day's weather from the user.
+            let wthr = document.getElementById('weatherBox').value;
+
+            // Choose footwear
+            let foot;
+            if (wthr == "hot") {
+                foot = "You should wear " + "sandals."
+            }
+            else if (wthr == "rain") {
+                foot = "You should wear " + "galoshes."
+            }
+            else if (wthr == "snow") {
+                foot = "You should wear " + "boots."
+            }
+            else {
+                foot = "You should still wear " + "shoes."
+            }
+
+            // Display the correct footwear to the user.
+            document.getElementById('outputDiv').innerHTML = foot;
+        }
+    </script>
+</head>
+
+<body>
+    How's the weather today? <input type="text" id="weatherBox" size="10">
+    <button type="button" onclick="footWear()">Select Footwear</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

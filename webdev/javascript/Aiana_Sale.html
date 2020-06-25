@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Slowest Days Sale</title>
+    <script>
+        /* Input: Customer's subtotal
+            * Processing: Get current day of the week.
+            * If subtotal is greater than 50 and today is Tuesday
+            * or Wednesday, subtract 10% from the subtotal. Then add 6% of the
+            * total amount due as sales tax. 
+            * Output: Subtotal after possible discount and sales tax.
+            */
+        function getTotal() {
+            // Determine current day of the week.
+            let d = new Date().getDay();
+
+            // Input customer's subtotal.
+            let amtdue = parseFloat(document.getElementById('amtdueBox').value);
+            let wdisc = .9;
+            let totalntax = 1.06;
+
+            // Apply promotional discount if today is Tuesday or Wednesday.
+            // Add sales tax.
+
+            let subtotal;
+            if (amtdue >= 50 && (d == 2 || d == 3)) {
+                subtotal = (amtdue * wdisc) * totalntax;
+            }
+            else {
+                subtotal = amtdue * totalntax;
+            }
+
+            // Round the subtotal to two digits after the decimal.
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            subtotal = Math.round(subtotal * multiplier) / multiplier;
+
+            // Display subtotal after discount, if any, including sales tax.
+            document.getElementById('outputDiv').innerHTML = subtotal;
+
+        }
+    </script>
+</head>
+
+<body>
+    Customer's Subtotal: <input type="text" id="amtdueBox" size="3"><br>
+    <button type="button" onclick="getTotal()">Calculate</button><br>
+    Amount due: <div id="outputDiv"></div>
+</body>
+
+</html>

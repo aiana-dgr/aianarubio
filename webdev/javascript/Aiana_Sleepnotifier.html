@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Anti-Sleep In</title>
+    <script>
+        /* Input: None.
+            * Processing: Let program get current date and day of the week.
+            * Check wether current day is a weekday and not holiday, 
+            * or if today is a weekend or a holiday.
+            * Output: Alert user to get up or sleep in.
+            */
+
+    function alertUser() {
+        // Determine current date and day of the week.
+        let now = new Date();
+        let month = now.getMonth();
+        let doM = now.getDate();
+        let doW = now.getDay();
+
+        // Check wether user can sleep in or should get up
+        let message;
+        if (month == 0 && doM == 1) {
+            message = "Sleep in."
+        }
+        else if (month == 6 && doM == 4) {
+            message = "Sleep in."
+        }
+        else if (month == 11 && doM == 25) {
+            message = "Sleep in."
+        }
+        else if (doW == 0 || doW == 6) {
+            message = "Sleep in."
+        }
+        else {
+            message = "Get up!"
+        }
+        // Display alert message.
+        document.getElementById('outputDiv').innerHTML = message;
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Anti-SleepIn Program</h1>
+    <button type="button" onclick="alertUser()">Alert Me!</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mileage</title>
+
+    <script>
+        /* Input: original odometer reading, new odometer reading and gas used in gallons.
+         * Processing:
+         *   1. Calculate the miles traveled by getting the 
+         *   difference of original odometer reading from new odometer reading.
+         *   2. Divide the miles traveled by the amount of gallons.
+         *   3. Round the result to two digits after the decimal.
+         * Output: the mileage of the vehicle
+         */
+        function mileage() {
+            // Get the original odometer reading from the user.
+            let odo1 = parseFloat(document.getElementById('odo1inputBox').value);
+
+            // Get the new odometer reading from the user.
+            let odo2 = parseFloat(document.getElementById('odo2inputBox').value);
+
+            // Get the gas in gallons from the user.
+            let gas = parseFloat(document.getElementById('gasinputBox').value);
+
+            // Compute the difference between the two odometer readings.
+            let dist = odo2 - odo1;
+
+            // Calculate the mileage of the vehicle.
+            let mil = dist / gas;
+
+            // Round the mileage to two digits after the decimal.
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            mil = Math.round(mil * multiplier) / multiplier;
+
+            // Display the mileage of the vehicle to the user.
+            document.getElementById('outputDiv').innerHTML = mil + "miles/gallon";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Please enter the odometer readings:</h3>
+    Original odometer reading: <input type="text" id="odo1inputBox" size="5">
+    New odometer reading: <input type="text" id="odo2inputBox" size="5"><br>
+    Gas used in gallons: <input type="text" id="gasinputBox" size="3"><br>
+    <button type="button" onclick="mileage()">Get Mileage</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

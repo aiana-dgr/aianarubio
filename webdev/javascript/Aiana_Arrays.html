@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Using Arrays</title>
+    <script>
+        /*Processing: Have two functions where one returns the sum of the first and last elements of an array,
+            * and the other function should return the middle element of an array with an odd number of elements, or
+            * if the number of elements in the array is even, the function should return the average of 
+            * the two middle elements.
+            */
+        
+        //function made for testing purposes. Remove this function before submitting.
+        function showResults() {
+            let samplelist = [5, -2.1, 6.3, 9, 5, 13];
+            let sum = addEnds(samplelist);
+
+            let even = [12, 4, 8, 15, 17, 5, 20, 11];
+            let odd = [17, 8, 9, 5, 20];
+            let evenMid = getMiddle(even);
+            let oddMid = getMiddle(odd);
+
+            //Display results for testing
+            document.getElementById('outputDiv').innerHTML = 
+            "The sum: " + sum + "<br/>" + "Even: " + evenMid + "<br/>" + "Odd: " + oddMid;
+        }
+
+        function addEnds(list) {
+            let result = list[0] + list[list.length - 1];
+            return result;
+        }
+
+        function getMiddle(list) {
+            let higherMid = list[list.length/2];
+            let lowerMid = list[list.length/2 - 1];
+            let answer;
+            if (list.length % 2 == 0) {
+                answer = (higherMid + lowerMid) / 2;
+            }
+            else {
+                answer = list[list.length/2 - .5];
+            }
+            return answer;
+        }
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="showResults()">Test</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

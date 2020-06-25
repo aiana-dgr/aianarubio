@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Multiplication Table of 5</title>
+    <script>
+        /* Input: None
+            * Processing: Multiply the number 5 by 1-12.
+            * Output: The multiplication table of 5.
+            */
+
+        function fiveTimes() {
+            let output = "";
+
+            // Loop through number 1 - 12. Add 5 to the product for each number on the loop.
+            for (let mult = 1; mult <= 12; mult++) {
+                output += "5 x " + mult + " = " + mult * 5 + "<br>";
+            }
+
+            //Display the multiplication table of 5.
+            document.getElementById('outputDiv').innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Multiplication Table of 5</h1>
+    <button type="button" onClick="fiveTimes()">Show me!</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

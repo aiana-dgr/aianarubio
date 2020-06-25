@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Power of 2</title>
+    <script>
+        /* Input: None
+            * Processing: Raise 2 from 0 to the 31st power.
+            * Output: The series of 2 raised to the power of 0 to the 31st power.
+            */
+
+        function raiseTo() {
+            let output = "";
+
+            // Loop through number 1 - 31. Raise 2 to each power on the loop.
+            for (let power = 0; power <= 31; power++) {
+                if (power == 0) {
+                    output += Math.pow(2, power);
+                }
+                else {
+                    output += ", " + Math.pow(2, power);
+                }
+            }
+            //Display the series.
+            document.getElementById('outputDiv').innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>All Powers of 2</h3>
+    <button type="button" onClick="raiseTo()">Show me!</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

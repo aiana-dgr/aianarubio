@@ -1,0 +1,296 @@
+nav a:hover
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  background-color: #F9C76D;
+  font-family: 'Pacifico', Brush Script MT, cursive;
+  line-height: 1.5;
+  margin-bottom: -17px;
+}
+
+h2 {
+  border-top: 5px double;
+  border-bottom: 5px double;
+  padding: 0.2em;
+}
+
+body {
+  background-color: #FAE05C;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 110px auto;
+}
+
+.logo-box {
+  background-color: white;
+  border-radius: 50px 50px 0 0;
+  padding: 0.6em;
+  border: 1px solid #a43312;
+}
+
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  color: #D6B070;
+}
+
+nav a{
+  color: #645C5C;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #645C5C;
+  color: #D6B070;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  margin: 0;
+}
+
+main {
+  background-color: white;
+}
+
+.banner-box img, .rivers-banner img, .contact-box img {
+  width: 100%;
+}
+
+.home-grid {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+}
+
+.home-headline-1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.home-paragraph-1 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+
+.home-right-img {
+  grid-column: 4 / 6;
+  grid-row: 1 / 3;
+}
+
+.home-headline-2 {
+  grid-column: 3 / 6;
+  grid-row: 4 / 5;
+}
+
+.home-paragraph-2 {
+  grid-column: 4 / 6;
+  grid-row: 5 / 7;
+}
+
+.home-left-img {
+  grid-column: 1 / 3;
+  grid-row: 4 / 6;
+}
+
+.home-paragraph-3 {
+  text-align: center;
+  grid-column: 1 / 7;
+  grid-row: 7 / 8;
+}
+
+section p {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.home-left-img, .home-right-img {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 10px 10px 10px #999;
+}
+
+.rivers-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rivers-banner img {
+    grid-column: 1 / -1; /* the -1 is just a fancy way to say "span all the columns" */
+    grid-row: 1;
+}
+
+.rivers-heading h1{
+    background-color: rgba(240, 240, 240, 0.8);
+    margin: 2em 2em;
+    padding: 1em;
+    text-align: center;
+}
+
+.rivers-heading {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.rivers-grid {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 2em;
+}
+
+.rivers-left-img {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+}
+
+.rivers-left-head {
+  grid-column: 1 / 6;
+  margin-top: -10px;
+}
+
+.rivers-left-paragraph {
+  grid-column: 1 / 6;
+  grid-row: 3 / 4;
+}
+
+.rivers-right-img {
+  grid-column: 6 / 11;
+  grid-row: 1 / 2;
+}
+
+.rivers-right-head {
+  grid-column: 6 / 11;
+  margin-top: -10px;
+}
+
+.rivers-right-paragraph {
+  grid-column: 6 / 11;
+  grid-row: 3 / 4;
+}
+
+
+.rivers-bottom {
+  grid-column: 2 / 10;
+  grid-row: 4 / 6;
+}
+
+.rivers-bottom-img {
+  float: left;
+  margin-right: 20px; 
+  margin-bottom: 10px;
+}
+
+.rivers-bottom-head {
+  margin-bottom: 10px;
+}
+
+.rivers-left-img, .rivers-right-img, .rivers-bottom-img {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 10px 10px 10px #999;
+}
+
+.rivers-left-head, .rivers-right-head, .rivers-bottom-head {
+  background-color: white;
+  color: #F9C76D;
+  text-align: center;
+}
+
+.rivers-left-paragraph, .rivers-right-paragraph, .rivers-bottom-paragraph {
+  margin-top: -10px;
+  text-align: justify;
+}
+
+.faq-heading {
+  padding: 1em;
+  margin-bottom: 20px;
+}
+
+.faq-heading h1 {
+  text-align: center;
+  background-color: white;
+  color: #F9C76D;
+}
+
+.faq-grid h3 {
+  padding: 0.5em;
+}
+
+.faq-grid p {
+  padding: 1em;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+    
+.contact-box img {
+  grid-column: 1 / -1; /* the -1 is just a fancy way to say "span all the columns" */
+  grid-row: 1;
+}
+
+.action h3 {
+  background-color: rgba(240, 240, 240, 0.8);
+  margin: 2em 3em;
+  color: red;
+  text-align: center;
+}
+
+.action {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: rgba(240, 240, 240, 0.8);
+  margin: 1em 3em;
+  padding: 1em;
+  text-align: center;
+}
+    
+.action button {
+    line-height: 2em;
+    width: 10em;
+    background-color: #e7c24f;
+    font-size: 1.2em;
+}
+
+footer {
+  height: 55px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer p {
+  padding: 1em;
+}
+
+.social {
+  margin-left: 200px;
+}
+
+.social img {
+  margin: 5px;
+  margin-bottom: 0;
+  height: 90%;
+}
+
+@media screen and (max-width: 550px) {
+  .home-grid, nav ul {
+    display: block;
+  }
+}

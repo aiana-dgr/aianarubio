@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Odd Adder</title>
+    <script>
+        /* Input: An integer from the user.
+            * Processing: Sum up all the odd integers between 1 and the
+            * integer given by the user.
+            * Output: The sum of all the odd integers.
+            */
+
+        function sumUp() {
+            let n = parseInt(document.getElementById('integerBox').value);
+
+            //Loop through the every number from 1 to the number the user gave.
+            let sum = 0;
+            for (cnum = 1; cnum <= n; cnum++) {
+                if (cnum % 2 == 1) {
+                    sum += cnum;
+                }
+            }
+
+            //Display sum of all integers.
+            document.getElementById('outputDiv').innerHTML = sum;
+        }
+    </script>
+</head>
+
+<body>
+    Please enter an integer <input type="text" id="integerBox" size="3"><br>
+    <button type="button" onClick="sumUp()">Sum Up My Odds!</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>
