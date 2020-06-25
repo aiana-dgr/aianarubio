@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arcade Codes | Games</title>
+    <link rel="stylesheet" href="acstyle.css">
+</head>
+
+<body>
+  <div id="content">
+    <header>
+        <div class="logo-box">
+            <a href="home.html"><img
+                    src="https://cdn.glitch.com/a2984c2d-d870-48c7-9b04-8fce8a7e284d%2FAC%20LOGO.png?v=1583489774896"
+                    alt="Arcade Codes Logo"></a>
+        </div>
+        <div class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="blog.html">BLOG</a>
+            <div class="games">
+                <button class="gamesbtn">GAMES
+                    <i class="links"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#pong">PONG</a>
+                    <a href="#skeet">SKEET</a>
+                    <a href="#asteroids">ASTEROIDS</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="games-banner">
+            <img src="https://cdn.glitch.com/a2984c2d-d870-48c7-9b04-8fce8a7e284d%2Fgames_banner.jpg?v=1583556844942"
+                 alt="pixelated mosaic">
+            <p>
+              Photo from freepik
+          </p>
+        </div>
+        <div class="games-grid">
+        <article class="game-pong" id="pong">
+              <div>
+                <iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5e8ddcaec2a93000147a29b2" title="Embedded content made with Kapwing">
+                </iframe>
+              </div>
+              <h2>My Version of the Simple Pong Game</h2>
+              <p class="pong-paragraph-1">
+          File: pong.py<br>
+          Original Author: Br. Burton<br>
+          Designed to be completed by others<br>
+          Code and Design completed by Aiana<br>
+          This program implements a simplistic version of the
+          classic Pong arcade game.
+          <br>
+          <br>
+          Above is a video clip of the gameplay of the program.
+              </p>
+              <p class="pong-paragraph-2">
+          To see Pong's code and design files <a href="https://github.com/aiana-dgr/pong" target="_blank">here</a>.
+              </p>
+        </article>
+        <article class="game-skeet" id="skeet">
+              <div>
+                <iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5e8de5beb5bdab0015eb6d0d" title="Embedded content made with Kapwing">
+                </iframe>
+              </div>
+              <h2>My Version of the Simple Skeet Game</h2>
+              <p class="skeet-paragraph-1">
+          File: skeet.py<br>
+          Original Author: Br. Burton<br>
+          Designed to be completed by others<br>
+          Code and Design completed by Aiana<br>
+          This program implements an awesome version of skeet.
+          <br>
+          <br>
+          Above is a video clip of the gameplay of the program.
+              </p>
+              <p class="skeet-paragraph-2">
+          To see Skeet's python code and design files <a href="https://github.com/aiana-dgr/skeet" target="_blank">here</a>..
+              </p>
+        </article>
+        <article class="game-asteroids" id="asteroids">
+              <div>
+                <iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5e8dd8fab5bdab0015eae158" title="Embedded content made with Kapwing">
+                </iframe>
+              </div>
+              <h2>My Version of an Asteroids Game</h2>
+              <p class="asteroids-paragraph-1">
+          File: asteroids.py<br>
+          Original Author: Br. Burton<br>
+          Designed to be completed by others<br>
+          Code and Design completed by Aiana<br>
+          This program implements my version of a space shooting game.
+          <br>
+          <br>
+          Above is a video clip of the gameplay of the program.
+              </p>
+              <p class="asteroids-paragraph-2">
+          To see Asteroid's python code and design files <a href="https://github.com/aiana-dgr/asteroids" target="_blank">here</a>..
+              </p>
+        </article>
+          </div>
+    <h3>Leave a comment</h3>
+    <div id="feedback"></div>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_mail">
+            </li>
+            <li>
+                <label for="msg">Comment:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Post</button>
+            </li>
+        </ul>
+    </form>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function (e) {
+            // stop the form from doing the default action
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Thank you! ' + formElement.user_name.value + 'Appreciate your comment. Have a nice day!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="https://cdn.glitch.com/9b47732b-82c6-494b-912e-a43e5b429466%2Ffacebook%20(1).png?v=1580225232871"
+                    alt="facebook icon">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+                <img src="https://cdn.glitch.com/a2984c2d-d870-48c7-9b04-8fce8a7e284d%2Ftwitter.png?v=1584803918981"
+                    alt="twitter icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="https://cdn.glitch.com/9b47732b-82c6-494b-912e-a43e5b429466%2Fyoutube%20(1).png?v=1580225235836"
+                    alt="youtube icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://cdn.glitch.com/9b47732b-82c6-494b-912e-a43e5b429466%2Finstagram%20(1).png?v=1580225234431"
+                    alt="instagram icon">
+            </a>
+            <a href="https://www.pinterest.com/" target="_blank">
+                <img src="https://cdn.glitch.com/a2984c2d-d870-48c7-9b04-8fce8a7e284d%2Fpinterest.png?v=1584803921715"
+                    alt="pinterest icon">
+            </a>
+            <a href="site-plan.html" target="_blank">Site-Plan</a>
+      </div>
+        <div class="end-logo">
+          <p>
+            &copy;2020 Arcade Codes - Aiana Rubio - WDD 130 09
+          </p>
+          <a href="index.html">
+              <img src="https://cdn.glitch.com/a2984c2d-d870-48c7-9b04-8fce8a7e284d%2FAC%20LOGO.png?v=1583489774896"
+                  alt="Arcade Codes Logo"></a>
+        </div>
+    </footer>
+  </div>
+</body>
+
+</html>
