@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Ajax|Week09 Assignment</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign09.css">
+    <script type="text/javascript" src="assign09.js"></script>
+  </head>
+  <body>
+    <div class="cities">
+      <h3>10 Largest Cities</h3>
+      <p>Please select country:<p>
+      <input type="radio" value="canada.txt" onclick="loadDoc(value)" name="country">
+      <label>Canada</label>
+      <input type="radio" value="mexico.txt" onclick="loadDoc(value)" name="country">
+      <label>Mexico</label>
+      <input type="radio" value="russia.txt" onclick="loadDoc(value)" name="country">
+      <label>Russia</label>
+      <input type="radio" value="usa.txt" onclick="loadDoc(value)" name="country">
+      <label>USA</label>
+      <div id="cities"></div>
+    </div>
+    <hr>
+    <div class="student">
+      <h3>Students Info:</h3>
+      <input type="text" id="url" value="json.txt" name="studentInfo">
+      <button type="button" onclick="loadDoc(url.value)" name="button">Get Info</button>
+      <div id="info"></div>
+    </div>
+  </body>
+</html>

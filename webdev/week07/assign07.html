@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="assign07.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Mortgage Calculator</h2>
+        </header>
+        <form name="mform" id="mform" onreset=onReset()>
+                <label>Loan Amount: $</label>
+                <input type="text" id="amount" name="amount" oninput="preValidation()" size="10"> <small
+                    id="amterr"></small><br>
+                <label>Annual Percentage Rate:</label>
+                <input type="text" id="apr" name="arp" oninput="preValidation()" size="5"> <small id="aprerr"></small><br>
+                <label>Loan Term(in years):</label>
+                <input type="text" id="term" name="term" oninput="preValidation()" size="5">
+                <small id="termerr"></small><br>
+
+                <label>Monthly Payment:</label><div id="payment"></div>
+                <br>
+
+                <button type="button" id="calculate" onclick="doCalculate()">Calculate
+                    Payment</button>
+                <button type="reset" id="clear">Clear</button>
+        </form>
+        <footer>
+            <p>Aiana Rubio | Mortgage Calculator - CS213 Assignment 07</p>
+        </footer>
+    </div>
+    <script>
+        let amount, apr, term, monthlyPayment;
+
+        // This function checks inputs before submission
+        // Displays error message beside each input boxes with invalid input
+        function preValidation() {
+            amount = parseFloat(document.getElementById('amount').value);
+            apr = parseFloat(document.getElementById('apr').value);
+            term = parseFloat(document.getElementById('term').value);
+
+            try {
+                if (apr < 0 || apr > 25) throw "Value must be between 0 and 25.00%";
+                if (apr > 0 || apr <= 25) throw "Good";
+                if (apr.value == null) throw "Invalid. Cannot be empty or must be a number";
+            } catch (err) {
+                document.getElementById('aprerr').innerHTML = err;
+            }
+
+            try {
+                if (term < 0 || term > 40) throw "Value must be between 0 and 40";
+                if (term > 0 || term <= 40) throw "Good";
+                if (term.value == null) throw "Invalid. Cannot be empty or must be a number";
+            } catch (err) {
+                document.getElementById('termerr').innerHTML = err;
+            }
+
+            try {
+                if (amount > 0 && amount <= 1000000) throw "Good";
+                if (amount > 1000000) throw "Amount too high. Maximum amount is $1000000";
+                if (amount.value == null) throw "Invalid. Cannot be empty or must be a number";
+            } catch (err) {
+                document.getElementById('amterr').innerHTML = err;
+            }
+        }
+
+
+        // This function computes the monthly payment and updates
+        // the Monthly Payment field when called
+        function doCalculate() {
+            let amt, mr, n;
+            let valid = validate();
+
+            if (valid == true) {
+                amt = amount;
+                mr = apr / 100 / 12;
+                n = term * 12;
+
+                monthlyPayment = amt * mr * (Math.pow(1 + mr, n)) / (Math.pow(1 + mr, n) - 1);
+
+                //Convert to string with 2 decimal places
+                monthlyPayment = monthlyPayment.toFixed(2);
+
+                //Display the monthly payment to the user
+                document.getElementById('payment').innerHTML = "$" + monthlyPayment;
+            } else {
+                document.getElementById('payment').innerHTML = "$xx.xx";
+            }
+        }
+
+        function validate() {
+            if (amount > 1000000) {
+                document.getElementById('amterr').innerHTML = "Max amount is $1,000,000"
+                document.getElementById('amount').focus();
+                return false;
+            }
+
+            if (apr < 0 || apr > 25) {
+                document.getElementById('aprerr').innerHTML = "Value must be between 0 and 25.00%";
+                document.getElementById('apr').focus();
+                return false;
+            }
+
+            if (term < 1 || term > 40) {
+                document.getElementById('termerr').innerHTML = "Value must be between 1 and 40";
+                document.getElementById('term').focus();
+                return false;
+            }
+
+            if (document.forms['mform'].amount.value === "") {
+                document.getElementById('amterr').innerHTML = "Cannot be empty";
+                document.getElementById('amount').focus();
+                return false;
+            }
+
+            if (document.forms['mform'].apr.value === "") {
+                document.getElementById('aprerr').innerHTML = "Cannot be empty";
+                document.getElementById('apr').focus();
+                return false;
+            }
+
+            if (document.forms['mform'].term.value === "") {
+                document.getElementById('termerr').innerHTML = "Cannot be empty";
+                document.getElementById('term').focus();
+                return false;
+            }
+
+            document.getElementById('amterr').innerHTML = "";
+            document.getElementById('aprerr').innerHTML = "";
+            document.getElementById('termerr').innerHTML = "";
+
+            return true;
+        }
+
+        function onReset() {
+            document.getElementById('amount').focus();
+            document.getElementById('payment').innerHTML = "$";
+            document.getElementById('amterr').innerHTML = "";
+            document.getElementById('aprerr').innerHTML = "";
+            document.getElementById('termerr').innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>

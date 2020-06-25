@@ -1,0 +1,187 @@
+header {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 110px auto;
+}
+
+.logo-box {
+    padding: 0.5em;
+}
+
+.logo-box img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(173, 78, 14);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Change of color to navbar links on hover*/
+.navbar a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(119, 17, 17);
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(18, 53, 148);
+}
+
+h3 {
+    margin-left: 150px;
+    margin-top: 150px;
+    color: rgb(53, 134, 16);
+}
+
+hr {
+    height: 3px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+}
+
+.home-grid {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+
+.home-grid p {
+    grid-column: 1/2;
+    padding-top: 2em;
+}
+
+.home-grid img,
+.home-grid blockquote {
+    grid-column: 2/3;
+}
+
+.home-grid img {
+    width: 80%;
+    border: 10px double rgb(119, 17, 17);
+}
+
+.home-grid blockquote {
+    text-align: center;
+    margin-right: 100px;
+}
+
+section {
+    margin-top: 100px;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+    border: 2px solid gray;
+    box-shadow: 10px 10px 10px #999;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+tr th {
+    color: rgb(18, 53, 148);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid gray;
+}
+
+td {
+    border: 1px solid gray;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    padding: 2em;
+    border: 3px solid rgb(53, 134, 16);
+    border-radius: 1em;
+    margin-bottom: 50px;
+    ;
+}
+
+ul {
+    list-style: none;
+    padding: 0.5em;
+    margin: 0;
+}
+
+li:first-child label, li:nth-child(6) label {
+    margin-left: -148px;
+    text-align: left;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    font: 1em monospace;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    padding-left: 90px;
+}
+
+
+button {
+    margin-left: .5em;
+}
+
+footer {
+    height: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer p {
+    grid-column: 1/2;
+    margin-top: -30px;
+    color: rgb(197, 194, 8);
+}
+
+.social {
+    grid-column: 3/4;
+    margin-left: 40px;
+}

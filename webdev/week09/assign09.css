@@ -1,0 +1,49 @@
+.cities {
+    background-color:rgb(230, 150, 46);
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+hr {
+    height: 3px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+}
+
+.student {
+    background-color:rgb(72, 94, 192);
+    color: aliceblue;
+}
+
+.student button {
+    margin-bottom: 20px;
+}
+
+#cities, #info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+table {
+    width: 70%;
+    margin-bottom: 30px;
+    border: 2px solid gray;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+tr th {
+    color: rgb(18, 148, 35);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid gray;
+    text-align: center;
+}
+
+td {
+    border: 1px solid gray;
+}

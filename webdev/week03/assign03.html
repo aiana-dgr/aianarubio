@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <title>Aiana's Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url("chalks.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 14px;
+            color: aliceblue;
+        }
+
+        main {
+            overflow: hidden;
+            background-color: rgb(41, 8, 4);
+            border: 10px groove rgb(185, 47, 47);
+        }
+
+        #content {
+            max-width: 960px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <div class="logo-box">
+                <a href="assign03.html"><img src="cartoon.png" alt="Aiana Cartoon"></a>
+            </div>
+            <div class="navbar">
+                <a href="../webdev.html">CS 213 Assignments</a>
+                <a href="assign03.html#sched">Schedule</a>
+                <a href="assign03.html#form">Comments</a>
+                <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
+                <a href="https://byui.instructure.com/courses/96384" target="_blank">CS 213 Class</a>
+            </div>
+        </header>
+        <main>
+            <div class="title">
+                <h1>
+                    Aiana Rubio's Home Page!
+                </h1>
+                <hr>
+            </div>
+            <div class="home-grid">
+                <p>Hi! My name is <i>Aiana</i>. The people with me on the photo on the right is my family.
+                    I am from the <b>Philippines</b>, specifically from it's culinary capital - Pampanga!
+                    I wasn't born here in this capital, I originally came from the most populous city of the Philippines
+                    - Quezon City.
+                    But about two years ago my husband and I decided to move here and we have been loving it ever since
+                    because
+                    of the good food, less traffic and less crowd in this city.<br><br>
+                    I am majoring in <strong>Applied Technology</strong> and I am grateful to be a part of the BYU-I
+                    Online Degree Program. I am in awe of being able to continue my learning despite the global pandemic
+                    that's happening right now.
+                </p>
+                <img src="family.jpg" alt="Aiana's family">
+
+                <blockquote>"Continuous effort - not strength or intelligence - is the key to unlocking our potential"
+                    -Winston Churchill</blockquote>
+            </div>
+            <section id="sched">
+                <h2>Schedule Table</h2>
+                <table>
+                    <tr>
+                        <th>Course #</th>
+                        <th>Course Title</th>
+                        <th>Course Description</th>
+                        <th>Section #</th>
+                        <th>Class Time</th>
+                        <th>Class Location</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">CS 213</td>
+                        <td style="text-align: center;">Web Engineering</td>
+                        <td>Internet and web basics, web fundamentals, web browsers, web
+                            servers,
+                            and web terminology.
+                            This course teaches the concepts behind the fundamental tools used for building client-side
+                            web
+                            applications.
+                            It emphasizes client side programming standards and programming tools used to create dynamic
+                            web
+                            applications.</td>
+                        <td style="text-align: center;">05</td>
+                        <td>00:00-00:00AM</td>
+                        <td>WEB - Online Class</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">CS 246</td>
+                        <td style="text-align: center;">Software Design and Development</td>
+                        <td>Advanced object-oriented designs and software development.</td>
+                        <td style="text-align: center;">05</td>
+                        <td>00:00-00:00AM</td>
+                        <td>WEB - Online Class</td>
+                    </tr>
+                </table>
+            </section>
+            <h3>Leave a comment</h3>
+            <div id="form">
+                <form>
+                    <ul>
+                        <li>
+                            <input type="radio" id="instructor" name="user_type" value="instructor">
+                            <label for="instructor">Instructor</label>
+                            <input type="radio" id="student" name="user_type" value="student">
+                            <label for="student">Student</label>
+                            <input type="radio" id="other" name="user_type" value="other">
+                            <label for="other">Other</label>
+                        </li>
+                        <li>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name">
+                        </li>
+                        <li>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" name="user_mail">
+                        </li>
+                        <li>
+                            <label for="msg">Comment:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                        </li>
+                        <li>
+                            <label for="visibility">Choose who can see this:</label>
+
+                            <select id="visibility">
+                                <option value="private">Only you and me</option>
+                                <option value="public">Everyone</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="namecheck" name="namecheck" value="Name">
+                            <label for="namecheck">I have input my name</label><br>
+                            <input type="checkbox" id="emailcheck" name="emailcheck" value="Email">
+                            <label for="emailcheck">I have input my E-mail address</label><br>
+                            <input type="checkbox" id="msgcheck" name="msgcheck" value="Message">
+                            <label for="msgcheck">I have left a message</label><br>
+                        </li>
+                        <li class="button">
+                            <button type="submit" value="Submit">Post</button>
+                        </li>
+                        <li class="button">
+                            <button type="reset">Clear</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="https://cdn.glitch.com/9b47732b-82c6-494b-912e-a43e5b429466%2Ffacebook%20(1).png?v=1580225232871"
+                        alt="facebook icon">
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="https://cdn.glitch.com/a2984c2d-d870-48c7-9b04-8fce8a7e284d%2Ftwitter.png?v=1584803918981"
+                        alt="twitter icon">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="https://cdn.glitch.com/9b47732b-82c6-494b-912e-a43e5b429466%2Fyoutube%20(1).png?v=1580225235836"
+                        alt="youtube icon">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="https://cdn.glitch.com/9b47732b-82c6-494b-912e-a43e5b429466%2Finstagram%20(1).png?v=1580225234431"
+                        alt="instagram icon">
+                </a>
+            </div>
+            <p>
+                Aiana Rubio - CS 213 05
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

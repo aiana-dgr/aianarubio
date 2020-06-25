@@ -1,0 +1,109 @@
+main {
+    overflow: hidden;
+}
+
+#content {
+    margin: 50px;
+}
+
+body {
+    background-image: url("waterdrop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 220px auto;
+}
+
+nav {
+    background-color: rgb(18, 84, 145);
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: aqua;
+    color: black;
+    text-decoration: underline;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+    margin: 0;
+}
+
+footer .social {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+span {
+    margin-top: 100px;
+    color: rgb(12, 85, 71);
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.social img {
+    width: 100px;
+    height: 100px;
+}
+
+form ul {
+    padding: 1em;
+    margin: 0;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Lucida Console', monaco, monospace;
+}
+
+input,
+textarea {
+    font: 1em monospace;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+}
+
+input:focus,
+textarea:focus {
+    border-color: black;
+}
+
+textarea {
+    vertical-align: top;
+    height: 10em;
+}
+
+.button {
+    padding-left: 100px;
+}
+
+
+button {
+    margin-left: .5em;
+}
+
+ul {
+    list-style: none;
+}

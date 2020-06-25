@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(214, 188, 188);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(197, 197, 197);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 650px;
+    max-width: 100%;
+}
+
+header {
+    background-color: rgb(37, 37, 143);
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+header h2 {
+    margin: 0;
+    color: #fff;
+}
+
+#payment {
+    color: green;
+    font-size: 30px;
+    text-align: center;
+}
+
+form {
+    padding: 30px 40px;
+}
+
+form label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+form label:nth-of-type(4) {
+    color: blue;
+    font-weight: bold;
+}
+
+form input {
+    margin-bottom: 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #5e5b5b;
+    color: #fff;
+}
+
+form small {
+    color: red;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(37, 37, 143);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 4px 0 0 #333797, 0 4px 0 1px rgba(0, 0, 0, 0.4), 0 4px 4px 1px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: -1px;
+    line-height: 50px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    width: 180px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+button:active {
+    background-color: #474EDD;
+    top: 4px;
+    box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 0 #333797, 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    background-color: #5158E0;
+    position: relative;
+    top: -1px;
+    box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #333797, 0 5px 0 1px rgba(0, 0, 0, 0.4), 0 5px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    font-size: 10px;
+    color: rgb(134, 64, 64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
