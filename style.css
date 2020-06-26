@@ -31,7 +31,7 @@ header {
     background-color: #111;
 }
 
-.navbar {
+.navbar, .side-bar {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -41,26 +41,22 @@ header {
     background-color: #555;
 }
 
-.navbar a {
+.navbar a, .side-bar a {
     color: white;
     text-decoration: none;
     width: 100%;
     font-size: 20px;
 }
 
-.navbar a:hover {
+.navbar a:hover, .side-bar a:hover {
     background-color: white;
     color: #111;
     font-weight: bold;
 }
 
-.navbar a.active {
+.navbar a.active, .side-bar a.active {
     background-color: rgb(243, 192, 26);
     color: black;
-}
-
-.side-bar {
-    display: none;
 }
 
 .container {
