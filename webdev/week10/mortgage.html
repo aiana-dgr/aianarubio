@@ -13,12 +13,12 @@
         <header>
             <h2>Mortgage Calculator</h2>
         </header>
-        <form name="mform" id="mform" onreset=onReset() action="mortgage.php" method="GET">
+        <form name="mform" id="mform" onsubmit="return validate()" onreset=onReset() action="mortgage.php" method="GET">
                 <label>Loan Amount: $</label>
                 <input type="text" id="amount" name="amount" oninput="preValidation()" size="10"> <small
                     id="amterr"></small><br>
                 <label>Annual Percentage Rate:</label>
-                <input type="text" id="apr" name="arp" oninput="preValidation()" size="5"> <small id="aprerr"></small><br>
+                <input type="text" id="apr" name="apr" oninput="preValidation()" size="5"> <small id="aprerr"></small><br>
                 <label>Loan Term(in years):</label>
                 <input type="text" id="term" name="term" oninput="preValidation()" size="5">
                 <small id="termerr"></small><br>

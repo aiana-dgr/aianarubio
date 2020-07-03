@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(45, 80, 194);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.review, .order {
+    flex-direction: column;
+}
+
+header {
+    align-items: center;
+    display: grid;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    max-width: 100%;
+}
+
+.review .container, .order .container {
+    padding: 2em;
+    margin: auto;
+    color: rgb(45, 80, 194);
+}
+
+.order .container {
+    color: green;
+}
+
+.header {
+    background-color: #b6d4fc;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+textarea {
+    color: #999;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control, .order-control, .cc-radios {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label, .order-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input, .order-control input, .confirm input, .review a, .order a, .confirm a {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.form-control input, .confirm input, .review a, .order a, .confirm a {
+    width: 100%;
+}
+
+.review a, .order a, .confirm a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+#total {
+    color: green;
+    font-size: 20px;
+}
+
+.form button {
+    background-color: rgb(45, 80, 194);
+    border: 2px solid rgb(45, 80, 194);
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+footer {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(45, 80, 194);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

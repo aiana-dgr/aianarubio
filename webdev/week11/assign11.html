@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="assign11.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <div class="logo-box">
+                <a href="assign11.html"><img src="arkklogo.png" alt="ARKK Logo"></a>
+            </div>
+        </header>
+        <div class="container">
+            <div class="header">
+                <h2>Order Form</h2>
+            </div>
+            <form class="form" id="form" name="form" onsubmit="return checkInputs()" action="assign11.php" method="GET">
+                <div class="form-control">
+                    <label>First Name:</label>
+                    <input type="text" id="first_name" name="first_name">
+                    <small>Error Message</small>
+                </div>
+
+                <div class="form-control">
+                    <label>Last Name:</label>
+                    <input type="text" id="last_name" name="last_name">
+                    <small>Error Message</small>
+                </div>
+
+                <div class="form-control">
+                    <label>Address:</label><br>
+                    <textarea name="address" rows="4" required>Street Address, City, State, Zip</textarea><br>
+                </div>
+
+                <div class="form-control">
+                    <label>Phone:</label>
+                    <input type="text" id="phone" name="phone">
+                    <small>Error Message</small>
+                </div>
+
+                <div class="order-control">
+                    <label for="item_0">5 Gallon Slim Container(with Faucet) - $3.00</label>
+                    <input type="number" value="0" id="item_0" name="item_0" min="0" max="100"><br>
+                    <label for="item_1">5 Gallon Round Container - $3.00</label>
+                    <input type="number" value="0" id="item_1" name="item_1" min="0" max="100"><br>
+                    <label for="item_2">2.5 Gallon Slim Container(with Faucet) - $2.50</label>
+                    <input type="number" value="0" id="item_2" name="item_2" min="0" max="100"><br>
+                    <label for="item_3">1Liter Pet Bottles Bundle(100pcs) - $10.00</label>
+                    <input type="number" value="0" id="item_3" name="item_3" min="0" max="100"><br>
+                    <label for="item_4">500mL Pet Bottles Bundle(200pcs) - $12.00</label>
+                    <input type="number" value="0" id="item_4" name="item_4" min="0" max="100"><br>
+                    <label for="item_5">350mL Pet Bottles Bundle(250pcs) - $14.00</label>
+                    <input type="number" value="0" id="item_5" name="item_5" min="0" max="100"><br>
+                    <label>Total:</label>
+                    <input id="total" name="total" type="text" readonly>
+                </div>
+
+                <div class="cc-radios">
+                    <input type="radio" name="card" value="visa"> Visa<br>
+                    <input type="radio" name="card" value="mastercard"> Mastercard<br>
+                    <input type="radio" name="card" value="amex"> American Express<br>
+                </div>
+
+                <div class="form-control">
+                    <label>Credit Card #:</label>
+                    <input type="text" id="credit_card" name="credit_card" size="20">
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>Credit Card Expiration Date</label>
+                    <input type="text" id="exp_date" name="exp_date" size="20">
+                    <small>Error Message</small>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" name="validate">Submit</button>
+                    <button type="reset" name="reset" onclick="onReset()">Clear</button>
+                </div>
+            </form>
+            <footer>
+                <p>Aiana Rubio | Order Form - CS213 Assignment 11</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assign11.js"></script>
+</body>
+
+</html>

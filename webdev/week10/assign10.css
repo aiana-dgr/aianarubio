@@ -67,7 +67,11 @@ form small {
     font-weight: bold;
 }
 
-button {
+a {
+    text-decoration: none;
+}
+
+button, a {
     background-color: rgb(37, 37, 143);
     border-radius: 6px;
     box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 4px 0 0 #333797, 0 4px 0 1px rgba(0, 0, 0, 0.4), 0 4px 4px 1px rgba(0, 0, 0, 0.5);
@@ -84,13 +88,13 @@ button {
     margin-right: 50px;
 }
 
-button:active {
+button:active, a:active {
     background-color: #474EDD;
     top: 4px;
     box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 0 #333797, 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
-.button:hover {
+.button:hover, a:hover {
     background-color: #5158E0;
     position: relative;
     top: -1px;
