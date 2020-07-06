@@ -19,7 +19,13 @@ li {
 
 video {
     width: 100%;
-}    
+}
+
+.hrmob {
+    margin-top: 5em;
+    border: 1px dashed #818181;
+    width: 50%;
+}
 
 .logo-box img {
     margin-top: -40px;
@@ -70,10 +76,12 @@ header {
 
 .container {
     padding: .5em;
+    padding-bottom: 5em;
 }
 
 .home-img img {
     width: 100%;
+    margin-top: 5em;
 }
 
 .container h1 {
@@ -116,6 +124,39 @@ blockquote {
     text-align: center;
     font-weight: bold;
     color: rgb(243, 192, 26);
+}
+
+.games-grid {
+    padding: 1em;
+  }
+  
+.games-grid h2 {
+    text-align: center;
+}
+  
+.games-grid p {
+    margin-left: 10%;
+  }
+
+.games-grid div {
+    height: 0; 
+    padding-bottom: calc(83.44% + 35px); 
+    position:relative; 
+    width: 100%;
+}
+
+.games-grid p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+iframe {
+    border:0; 
+    height:100%; 
+    overflow:hidden; 
+    position:absolute;
+    top:0; 
+    width:100%;
 }
 
 footer hr {
@@ -196,6 +237,10 @@ span {
         padding: 1em;
     }
 
+    .hrmob {
+        display: none;
+    }
+
     .side-bar {
         display: block;
         background-color: #111;
@@ -215,6 +260,33 @@ span {
         background-color: #111;
         color: #f1f1f1;
         font-weight: bold;
+    }
+      
+    .games-grid div {
+        height: 0; 
+        padding-bottom: calc(83.44% + 35px); 
+        position:relative; 
+        width: 100%;
+        margin-bottom: -25%;
+    }
+
+    .games-grid p {
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      
+    iframe {
+        border:0; 
+        height:70%; 
+        left:15%; 
+        overflow:hidden; 
+        position:absolute;
+        top:0; 
+        width:70%;
+    }
+
+    footer {
+        padding-top: 50px;
     }
 }
 
